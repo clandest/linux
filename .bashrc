@@ -7,9 +7,10 @@
 
 alias ls='ls --color=auto'
 alias l='ls -l'
-PS1='[\u@\h \W]\$ '
-
 alias ls="ls -h --color=auto"
-export PS1='\[\033[01;32m\]\u@\h \[\033[00;31m\]\W \$ \[\033[00m\]'
+
 export EDITOR="/usr/bin/vim"
-export BROWSER="/usr/bin/google-chrome-stable"
+export BROWSER="/usr/bin/chromium"
+
+# Custom bash prompt via kirsle.net/wizards/ps1.html
+export PS1="\[$(tput bold)\]\[$(tput setaf 2)\][\[$(tput setaf 3)\]\u\[$(tput setaf 1)\]@\[$(tput setaf 3)\]\h \[$(tput setaf 6)\]\W\[$(tput setaf 2)\]]\[$(tput setaf 4)\]\\$ \[$(tput sgr0)\]"
